@@ -1,0 +1,87 @@
+// Navbar styling
+
+.navbar {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+}
+
+.navbar a {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar .active {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Dark and light modes */
+.navbar-dark {
+  background-color: var(--bg-dark);
+}
+
+.navbar-dark a {
+  color: var(--text-dark);
+}
+
+.navbar-dark a:hover {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.navbar-light {
+  background-color: var(--bg-light);
+}
+
+.navbar-light a {
+  color: var(--text-light);
+}
+
+.navbar-light a:hover {
+  background-color: var(--accent);
+  color: var(--text-dark);
+}
+
+/* Theme toggle */
+.navbar .theme-toggle {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+}
+
+.navbar .theme-toggle:hover {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.navbar .theme-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--accent);
+}
+
+.navbar .theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.navbar .theme-toggle::after {
+  content: '🌙';
+}
+
+.navbar.dark-mode .theme-toggle::after {
+  content: '☀️';
+}

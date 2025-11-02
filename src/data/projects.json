@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Weather App",
+        "description": "A React app that shows live weather data.",
+        "image": "images/WeatherBroadcast.png",
+        "technologies": ["HTML", "CSS", "JavaScript", "React"],
+        "link": " https://weather-broadcast-webpage.onrender.com/ "
+    },
+    {
+        "id": 2,
+        "name": "Tin Dog Website",
+        "description": "A responsive website for a fictional dog service.",
+        "image": "images/tindog.PNG",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "link": " https://todo-list-omega-eight.vercel.app/ "
+    },
+    {
+        "id": 3,
+        "name": "Move It Startup Landing Page",
+        "description": "A landing page for a transportation startup.",
+        "image": "images/moveit.PNG",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "linmk": " https://move-it-start-up-webpage.onrender.com "
+    },
+    {
+        "id": 4,
+        "name": "Blog Website",
+        "description": "A blog website template with modern design.",
+        "image": "images/MyBlog.PNG",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "link": " https://blog-webpage-5ixx.onrender.com "
+    },
+    {
+        "id": 5,
+        "name": "Simon Game",
+        "description": "A classic Simon game implemented in JavaScript.",
+        "images": "images/SimonGame.png",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "link": " https://lexrift.itch.io/simon-game "
+    },
+    {
+        "id": 6,
+        "name": "Drum Kit Webpage",
+        "description": "A fun drum kit application that plays sounds on keypress.",
+        "image": "images/DrumKit.PNG",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "link": "https://lexrift.itch.io/drum-kit"
+    },
+    {
+        "id": 7,
+        "name": "Jorney Across Realms",
+        "description": "An adventure game developed using Unity.",
+        "image": "images/JAR.png",
+        "technologies": ["Unity", "C#"],
+        "link": "https://lexrift.itch.io/journey-across-realms"
+    },
+    {
+        "id": 8,
+        "name":"I.m Bored",
+        "description":"A boredom buster app that suggests activities.",
+        "image": "images/BoredWebpage.png",
+        "technologies":["HTML", "CSS", "JavaScript", "API"],
+        "link":"https://im-bored-webpage.onrender.com/"
+    }
+]
