@@ -2,103 +2,39 @@
 @use "../mixins" as *;
 @use "../animations" as *;
 
-.projects-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 3rem 2rem;
-  background-color: $bg-light;
-  color: $text-light;
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-  @include respond(md) {
-    padding: 2rem 1rem;
-  }
-}
-
-.project-card {
-  background-color: $secondary-color;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-  overflow: hidden;
-  cursor: pointer;
+.project-tech {
   display: flex;
-  flex-direction: column;
-  @include transition(transform, box-shadow);
-  animation: fadeIn 0.5s ease-out;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
-  }
+  .tech-badge {
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    border: 1px solid rgba($primary-color, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    transition: background-color 0.2s ease;
 
-  .project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .project-info {
-    padding: 1.2rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-
-    h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-      color: $primary-color;
-    }
-
-    p {
-      font-size: 0.95rem;
-      color: $text-light;
-      flex-grow: 1;
-      margin-bottom: 1rem;
-      line-height: 1.5;
-    }
-
-    .project-link {
-      display: inline-block;
-      background-color: $primary-color;
-      color: $text-dark;
-      padding: 0.6rem 1.2rem;
-      border-radius: $border-radius;
-      font-weight: 600;
-      text-decoration: none;
-      text-align: center;
-      @include transition(background-color, transform);
-
-      &:hover {
-        background-color: $button-hover-bg-color;
-        transform: translateY(-2px);
-      }
+    &:hover {
+      background-color: rgba($primary-color, 0.2);
     }
   }
 }
 
-// 🌙 Dark Mode
+// Dark mode adjustments
 body.dark-mode {
-  .projects-section {
-    background-color: $bg-dark;
+  .project-tech .tech-badge {
+    background-color: rgba($accent-color, 0.2);
     color: $text-dark;
-  }
+    border-color: rgba($accent-color, 0.4);
 
-  .project-card {
-    background-color: $card-bg-dark;
-    box-shadow: $shadow-dark;
-
-    .project-info {
-      h3 {
-        color: $accent-color;
-      }
-      p {
-        color: $text-dark;
-      }
-      .project-link {
-        background-color: $accent-color;
-        color: $text-dark;
-      }
+    &:hover {
+      background-color: rgba($accent-color, 0.35);
     }
   }
 }

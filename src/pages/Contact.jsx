@@ -6,7 +6,6 @@ import Footer from '../components/Footer.jsx';
 function Contact() {
     return (
         <div>
-            <Navbar />
             <h1>Contact Me</h1>
             <p>You can reach me at:</p>
             <ul>
@@ -18,7 +17,6 @@ function Contact() {
                     <a href="https://www.linkedin.com/in/oleksandr-babii/" target="_linkedInPage" rel="page reference"> My LinkedIn</a>
                 </li>
             </ul>
-            <Footer />
         </div>
     );
 }

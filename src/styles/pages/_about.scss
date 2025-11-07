@@ -1,0 +1,83 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.about-main {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  background-color: $bg-light;
+  color: $text-light;
+  transition: background-color $transition-time $transition-ease, color $transition-time $transition-ease;
+
+  body.dark-mode & {
+    background-color: $bg-dark;
+    color: $text-dark;
+  }
+}
+
+.about-section {
+  max-width: $max-content-width;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+
+  @include respond(mobile) {
+    padding: 1.5rem;
+  }
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  @include respond(tablet) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.about-image {
+  flex: 1;
+  display: flex; 
+  justify-content: center;
+
+  img {                                        
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: $shadow-light;
+    transition: transform $transition-time $transition-ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    body.dark-mode & {
+      box-shadow: $shadow-dark;
+    }
+  }
+}
+
+.about-text-block {
+  flex: 2;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: $primary-color;
+  font-weight: 700;
+
+  body.dark-mode & {
+    color: $accent-color;
+  }
+}
+
+.about-text {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: inherit;
+  max-width: 75%;
+}

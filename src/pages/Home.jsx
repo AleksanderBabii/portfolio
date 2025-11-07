@@ -7,11 +7,9 @@ import Footer from '../components/Footer.jsx';
 function Home() {
   return (
     <>
-      <Navbar />
       <main className="home">
         <HeroSection />
       </main>
-      <Footer />
     </>
   );
 }

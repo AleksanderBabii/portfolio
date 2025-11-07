@@ -40,7 +40,7 @@
       }
 
       &.active {
-        color: $primary-color;
+        color: $active-color-light;
         border-bottom: 2px solid $primary-color;
       }
     }
@@ -111,19 +111,24 @@
 // 🌙 Dark Mode
 body.dark-mode {
   .navbar {
-    background-color: $bg-dark;
+    background-color: $primary-color;
     color: $text-dark;
 
     .nav-link {
       color: $text-dark;
 
       &:hover {
-        color: $accent-color;
+        color: $secondary-color;
+      }
+
+      &.active{
+        color: $active-color-dark;
+        border-bottom: 2px solid $primary-color;
       }
     }
 
     .navbar-logo a {
-      color: $accent-color;
+      color: $secondary-color;
     }
 
     .theme-toggle,

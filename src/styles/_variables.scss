@@ -2,11 +2,28 @@
 $primary-color: #009474;
 $secondary-color: #ffffff;
 $accent-color: #00ffd5;
+$active-color-light: #68b8b1;
+$active-color-dark: #7700ff;
 
 $bg-light: #ffffff;
 $bg-dark: #121212;
 $text-light: #000000;
 $text-dark: #ffffff;
+
+$background:  
+    linear-gradient(
+      to right bottom,
+      rgba(79, 70, 229, 0.85),
+      rgba(79, 70, 229, 0.5)
+    ),
+    url("/images/hero-bg.jpg") center/cover no-repeat;
+
+//Footer
+$footer-bg-light:$secondary-color;
+$card-border-light: $secondary-color;
+$card-bg-dark: #073c49;
+$footer-bg-dark:$primary-color;
+$card-border-dark:$bg-light;
 
 //Button
 $button-hover-bg-color: #108ead;
@@ -20,12 +37,13 @@ $spacing-unit: 1rem;
 $font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-size-base: 16px;
 $line-height-base: 1.5;
+$max-content-width: 100%;
 
 // 🕓 Transitions & shadows
 $transition-time: 0.3s;
 $transition-ease: ease-in-out;
 $box-shadow-base: 0 4px 6px rgba(0, 0, 0, 0.1);
-$card-bg-dark: #073c49;
 $shadow-dark: #2c2c2c;
+$shadow-light:#c7c7c7;
 $box-shadow: #3b3a3a;
 

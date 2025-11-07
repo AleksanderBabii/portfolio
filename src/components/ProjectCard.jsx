@@ -14,18 +14,13 @@ function ProjectCard({ title, description, imageUrl, projectUrl, index }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ delay: index * 0.15 }} // staggered entrance
+      transition={{ delay: index * 0.15 }}
     >
       <img src={imageUrl} alt={title} className="project-image" />
       <div className="project-info">
         <h3>{title}</h3>
         <p>{description}</p>
-        <a
-          href={projectUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-link"
-        >
+        <a href={projectUrl} target="_blank" rel="noopener noreferrer" className="project-link">
           View Project
         </a>
       </div>

@@ -21,7 +21,7 @@ function Navbar() {
 return (
     <nav className={`navbar ${darkMode ? "navbar-dark" : "navbar-light"}`}>
       <div className="navbar-logo">
-        <Link to="/">Sasha’s Portfolio</Link>
+        <Link to="/">My Webpage</Link>
       </div>
 
       <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
