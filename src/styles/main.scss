@@ -1,0 +1,10 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./animations" as *;
+@use "./globals";
+@use "./components/navbar";
+@use "./components/footer";
+@use "./components/hero-section";
+@use "./pages/home";
+@use "./pages/about";
+@use "./pages/projects";

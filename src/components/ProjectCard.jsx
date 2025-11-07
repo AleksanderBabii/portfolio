@@ -1,24 +1,36 @@
-// Project cards component
-import React from 'react';    
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-function ProjectCard({ title, description, imageUrl, projectUrl }) {
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80 } },
+};
+
+function ProjectCard({ title, description, imageUrl, projectUrl, index }) {
   return (
-    <motion.div 
+    <motion.div
       className="project-card"
-      whileHover={{ scale: 1.05 }}
-      transition={{ type: 'spring', stiffness: 300 }}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ delay: index * 0.15 }} // staggered entrance
     >
-        <img src={imageUrl} alt={title} className="project-image" />
-        <div className="project-info">
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <a href={
-projectUrl} target="_blank" rel="noopener noreferrer" className="project-link">
-                View Project
-            </a>    
-        </div>
+      <img src={imageUrl} alt={title} className="project-image" />
+      <div className="project-info">
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <a
+          href={projectUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link"
+        >
+          View Project
+        </a>
+      </div>
     </motion.div>
-    );
+  );
 }
+
 export default ProjectCard;

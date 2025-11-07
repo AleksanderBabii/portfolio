@@ -1,0 +1,138 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bg-light;
+  padding: 1rem 2rem;
+  box-shadow: $box-shadow;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  .navbar-logo a {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: $primary-color;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .nav-link {
+      text-decoration: none;
+      color: $text-light;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        color: $accent-color;
+        transform: translateY(-2px);
+      }
+
+      &.active {
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 1rem;
+      background-color: $bg-light;
+      box-shadow: $box-shadow;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      z-index: 2000;
+    }
+  }
+
+  .navbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      color: $text-light;
+
+      &:hover {
+        transform: scale(1.1);
+        color: $accent-color;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: $text-light;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        color: $accent-color;
+      }
+    }
+  }
+
+  @include respond(mobile) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .navbar-links {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+}
+
+// 🌙 Dark Mode
+body.dark-mode {
+  .navbar {
+    background-color: $bg-dark;
+    color: $text-dark;
+
+    .nav-link {
+      color: $text-dark;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+    .navbar-logo a {
+      color: $accent-color;
+    }
+
+    .theme-toggle,
+    .menu-toggle {
+      color: $text-dark;
+    }
+
+    .navbar-links.open {
+      background-color: $bg-dark;
+    }
+  }
+}

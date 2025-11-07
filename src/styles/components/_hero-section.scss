@@ -1,0 +1,67 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(
+      to right bottom,
+      rgba(79, 70, 229, 0.85),
+      rgba(79, 70, 229, 0.5)
+    ),
+    url("/images/hero-bg.jpg") center/cover no-repeat;
+  color: $text-dark;
+  text-align: center;
+  padding: 0 2rem;
+  overflow: hidden;
+  position: relative;
+
+  @include respond(md) {
+    height: auto;
+    padding: 6rem 1rem;
+  }
+}
+
+.hero-content {
+  max-width: 800px;
+  animation: fade-up 0.8s ease both;
+
+  .header {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: $secondary-color;
+  }
+
+  .intro-info {
+    font-size: 1.125rem;
+    color: lighten($secondary-color, 10%);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Dark mode
+body.dark-mode {
+  .hero-section {
+    background: linear-gradient(
+        to right bottom,
+        rgba(18, 18, 18, 0.9),
+        rgba(18, 18, 18, 0.7)
+      ),
+      url("/images/hero-bg-dark.jpg") center/cover no-repeat;
+    color: $text-dark;
+
+    .header {
+      color: $accent-color;
+    }
+
+    .intro-info {
+      color: $text-dark;
+    }
+  }
+}

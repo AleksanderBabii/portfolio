@@ -1,20 +1,64 @@
 //Navbar 
-import { Link } from "react-router-dom";
-import React from "react";
-import "../styles/components/navbar.scss";
+import React, {useState} from "react";  
+import { Link, useLocation } from "react-router-dom";
+
+import "../styles/components/_navbar.scss";
 
 function Navbar() {
-  return (
-    <nav className="navbar">
-        <div className="navbar-logo">
-            <Link to="/">Sasha's Portfolio</Link>
-        </div>
-        <ul className="navbar-links">   
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/portfolio">Portfolio</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-        </ul>
+  const[darkMode, setDarkMode] = useState(false);
+  const [menuOpen, setMenuOpen]= useState(false);
+  const location = useLocation();
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+    document.body.classList.toggle("dark-mode");
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+return (
+    <nav className={`navbar ${darkMode ? "navbar-dark" : "navbar-light"}`}>
+      <div className="navbar-logo">
+        <Link to="/">Sasha’s Portfolio</Link>
+      </div>
+
+      <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
+        <Link
+          to="/"
+          className={location.pathname === "/" ? "active nav-link" : "nav-link"}
+        >
+          Home
+        </Link>
+        <Link
+          to="/about"
+          className={location.pathname === "/about" ? "active nav-link" : "nav-link"}
+        >
+          About
+        </Link>
+        <Link
+          to="/portfolio"
+          className={location.pathname === "/portfolio" ? "active nav-link" : "nav-link"}
+        >
+          Portfolio
+        </Link>
+        <Link
+          to="/contact"
+          className={location.pathname === "/contact" ? "active nav-link" : "nav-link"}
+        >
+          Contact
+        </Link>
+      </div>
+
+      <div className="navbar-controls">
+        <button className="theme-toggle" onClick={toggleTheme}>
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+        <button className="menu-toggle" onClick={toggleMenu}>
+          ☰
+        </button>
+      </div>
     </nav>
   );
 }

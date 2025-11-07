@@ -1,0 +1,26 @@
+@use "./variables" as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+}
+
+// Allows multiple comma-separated properties (background-color, color)
+@mixin transition($properties...) {
+  transition: $properties $transition-time $transition-ease;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
