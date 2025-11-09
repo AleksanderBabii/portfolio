@@ -3,16 +3,19 @@
 @use "../animations" as *;
 
 .projects-section {
-  min-height: 100vh; // makes sure the section takes the full viewport height
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // responsive grid
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); // responsive grid
   gap: 2rem;
-  padding: 3rem 2rem;
+  padding: 6rem 2rem;
 
-  justify-items: center;   // ✅ centers each project card horizontally
-  align-content: center;   // ✅ vertically centers the grid content in the section
+  justify-items: center;
+  align-content: center;
 
-  background-color: $bg-light;
+  background: $background-light;
   color: $text-light;
   transition: background-color 0.3s ease, color 0.3s ease;
 
@@ -22,7 +25,7 @@
 }
 
 .project-card {
-  max-width: 350px; // ✅ keeps consistent card width
+  max-width: 350px;
   width: 100%;
   background-color: $secondary-color;
   border-radius: $border-radius;
@@ -80,6 +83,28 @@
         background-color: $button-hover-bg-color;
         transform: translateY(-2px);
       }
+    }
+  }
+}
+
+//Dark mode
+body.dark-mode {
+  .projects-section {
+    background: $background-dark;
+  }
+  .project-card {
+    background-color: $card-bg-dark;
+    box-shadow: $shadow-light;
+
+     &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 18px #ffffff26;
+  }
+  }
+  .project-info {
+    h3,
+    p {
+      color: $secondary-color;
     }
   }
 }

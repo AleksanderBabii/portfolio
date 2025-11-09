@@ -1,22 +1,30 @@
 // 🎨 Colors
-$primary-color: #009474;
+$primary-color: #0577f8d9;
 $secondary-color: #ffffff;
-$accent-color: #00ffd5;
-$active-color-light: #68b8b1;
-$active-color-dark: #7700ff;
+$accent-color: #00c3ff;
+$active-color-light: #0577f8d9;
+$active-color-dark: #c0bbf5;
 
 $bg-light: #ffffff;
 $bg-dark: #121212;
 $text-light: #000000;
 $text-dark: #ffffff;
 
-$background:  
+$background-light:  
     linear-gradient(
       to right bottom,
-      rgba(79, 70, 229, 0.85),
-      rgba(79, 70, 229, 0.5)
+      #0577f8d9,
+      #c0bbf5
     ),
     url("/images/hero-bg.jpg") center/cover no-repeat;
+
+$background-dark: 
+    linear-gradient(
+      to right bottom,
+        rgba(18, 18, 18, 0.9),
+        rgba(18, 18, 18, 0.7)
+      ),
+      url("/images/hero-bg-dark.jpg") center/cover no-repeat;
 
 //Footer
 $footer-bg-light:$secondary-color;

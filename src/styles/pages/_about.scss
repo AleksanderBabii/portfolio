@@ -3,13 +3,13 @@
 
 .about-main {
   padding-top: 6rem;
-  padding-bottom: 4rem;
-  background-color: $bg-light;
+  padding-bottom: 8rem;
+  background: $background-light;
   color: $text-light;
   transition: background-color $transition-time $transition-ease, color $transition-time $transition-ease;
 
   body.dark-mode & {
-    background-color: $bg-dark;
+    background: $background-dark;
     color: $text-dark;
   }
 }
@@ -66,7 +66,7 @@
 .about-title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: $primary-color;
+  color: $secondary-color;
   font-weight: 700;
 
   body.dark-mode & {

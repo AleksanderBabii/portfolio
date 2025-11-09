@@ -1,0 +1,97 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.contact-section {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: $background-light;
+  color: $text-light;
+  text-align: center;
+  padding: 3rem 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  background: $secondary-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  padding: 2.5rem;
+  animation: fadeIn 0.8s ease-out;
+
+  h1 {
+    color: $primary-color;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.2rem;
+
+    li {
+      font-size: 1rem;
+      color: $text-light;
+
+      span {
+        font-weight: 600;
+        color: $primary-color;
+        margin-right: 0.5rem;
+      }
+
+      a {
+        color: $accent-color;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $primary-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// 🌙 Dark Mode
+body.dark-mode {
+  .contact-section {
+    background: $background-dark;
+    color: $text-dark;
+  }
+
+  .contact-container {
+    background-color: $card-bg-dark;
+    box-shadow: $shadow-light;
+
+    h1 {
+      color: $text-dark;
+    }
+
+    .contact-list li span {
+      color: $text-dark;
+    }
+    .phone-number{
+      color: $text-dark;
+    }
+
+    a {
+      color: $primary-color;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+}

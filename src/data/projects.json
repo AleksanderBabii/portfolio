@@ -43,7 +43,7 @@
     "id": 6,
     "title": "Drum Kit Webpage",
     "description": "A fun drum kit application that plays sounds on keypress.",
-    "imageUrl": "/images/DrumKit.PNG",
+    "imageUrl": "/images/DrumKit.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "projectUrl": "https://lexrift.itch.io/drum-kit"
   },
