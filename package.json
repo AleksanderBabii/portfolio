@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "type": "module",
-  "homepage": "https://github.com/AleksanderBabii/portfolio",
+  "homepage": "https://github.com/AleksanderBabii/portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
