@@ -7,6 +7,9 @@ const cardVariants = {
 };
 
 function ProjectCard({ title, description, imageUrl, projectUrl, index }) {
+
+  const imageSrc = `${import.meta.env.BASE_URL}${imageUrl.replace(/^\/+/, "")}`;
+
   return (
     <motion.div
       className="project-card"
@@ -16,7 +19,8 @@ function ProjectCard({ title, description, imageUrl, projectUrl, index }) {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ delay: index * 0.15 }}
     >
-      <img src={imageUrl} alt={title} className="project-image" />
+      <img src={imageSrc} alt={title} className="project-image" />
+
       <div className="project-info">
         <h3>{title}</h3>
         <p>{description}</p>

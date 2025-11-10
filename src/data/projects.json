@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Weather App",
     "description": "A React app that shows live weather data.",
-    "imageUrl": "/images/WeatherBroadcast.png",
+    "imageUrl": "images/WeatherBroadcast.png",
     "technologies": ["HTML", "CSS", "JavaScript", "React"],
     "projectUrl": "https://weather-broadcast-webpage.onrender.com/"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "title": "Tin Dog Website",
     "description": "A responsive website for a fictional dog service.",
-    "imageUrl": "/images/tindog.PNG",
+    "imageUrl": "images/tindog.PNG",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "projectUrl": "https://todo-list-omega-eight.vercel.app/"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "title": "Move It Startup Landing Page",
     "description": "A landing page for a transportation startup.",
-    "imageUrl": "/images/moveit.PNG",
+    "imageUrl": "images/moveit.PNG",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "projectUrl": "https://move-it-start-up-webpage.onrender.com/"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "title": "Blog Website",
     "description": "A blog website template with modern design.",
-    "imageUrl": "/images/MyBlog.PNG",
+    "imageUrl": "images/MyBlog.PNG",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "projectUrl": "https://blog-webpage-5ixx.onrender.com/"
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "title": "Simon Game",
     "description": "A classic Simon game implemented in JavaScript.",
-    "imageUrl": "/images/SimonGame.png",
+    "imageUrl": "images/SimonGame.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "projectUrl": "https://lexrift.itch.io/simon-game"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "title": "Drum Kit Webpage",
     "description": "A fun drum kit application that plays sounds on keypress.",
-    "imageUrl": "/images/DrumKit.png",
+    "imageUrl": "images/DrumKit.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "projectUrl": "https://lexrift.itch.io/drum-kit"
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "title": "Journey Across Realms",
     "description": "An adventure game developed using Unity.",
-    "imageUrl": "/images/JAR.png",
+    "imageUrl": "images/JAR.png",
     "technologies": ["Unity", "C#"],
     "projectUrl": "https://lexrift.itch.io/journey-across-realms"
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "title": "I'm Bored",
     "description": "A boredom buster app that suggests activities.",
-    "imageUrl": "/images/BoredWebpage.png",
+    "imageUrl": "images/BoredWebpage.png",
     "technologies": ["HTML", "CSS", "JavaScript", "API"],
     "projectUrl": "https://im-bored-webpage.onrender.com/"
   }
