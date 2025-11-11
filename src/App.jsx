@@ -17,10 +17,13 @@ function App() {
     <BrowserRouter> 
         <Navbar />
         <Routes>
+            <Route path="/portfolio" element={<Navigate to="/" replace/>} />
+
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} /> 
+            
             <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
