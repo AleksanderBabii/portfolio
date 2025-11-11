@@ -21,6 +21,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
     </BrowserRouter>
