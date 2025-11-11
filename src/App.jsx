@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -13,12 +13,12 @@ import "./styles/main.scss";
 
 
 function App() {
+  const basename = import.meta.env.MODE === "production" ? "/portfolio" : "/";
+
   return (
-    <BrowserRouter> 
+    <BrowserRouter basename={basename}> 
         <Navbar />
         <Routes>
-            <Route path="/portfolio" element={<Navigate to="/" replace/>} />
-
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Projects />} />
