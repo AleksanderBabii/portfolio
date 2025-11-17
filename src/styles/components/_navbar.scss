@@ -19,6 +19,11 @@
     font-size: 1.2rem;
     color: $primary-color;
     text-decoration: none;
+
+    &:hover{
+      transform: scale(1.1);
+      color: $accent-color;
+    }
   }
 
   .navbar-links {
@@ -28,17 +33,18 @@
 
     .nav-link {
       text-decoration: none;
-      color: $text-light;
+      color: $primary-color;
       font-weight: 500;
       transition: color 0.3s ease;
 
       &:hover {
+        transform: scale(1.1);
         color: $accent-color;
       }
 
       &.active {
-        color: $active-color-light;
-        border-bottom: 2px solid $primary-color;
+        color: $accent-color;
+        border-bottom: 2px solid $accent-color;
       }
     }
 
@@ -109,19 +115,42 @@
 body.dark-mode {
   .navbar {
     background-color: $primary-color;
-    color: $text-dark;
+    color: $text-light;
 
     .navbar-logo a {
-      color: $secondary-color;
+      color: $bg-dark;
+
+      &:hover{
+        transform: scale(1.1);
+        color: $bg-light;
+      }
     }
 
-    .navbar-links.open {
-      background-color: $bg-dark;
-    }
-
+        .navbar-links {
+          .nav-link {
+            color: $text-light;
+            
+            &.active {
+              color: $bg-light;
+              border-bottom: 2px solid $bg-light;
+            }
+    
+            &:hover {
+              transform: scale(1.1);
+              color: $bg-light;
+            }
+          }
+    
+        }
+    
     .theme-toggle,
     .menu-toggle {
-      color: $text-dark;
+      color: $text-light;
+
+      
+
     }
+
+    
   }
 }

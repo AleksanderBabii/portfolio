@@ -44,7 +44,7 @@
   img {                                        
     width: 500px;
     height: 500px;
-    border-radius: 50%;
+    border-radius: 0%;
     object-fit: cover;
     box-shadow: $shadow-light;
     transition: transform $transition-time $transition-ease;
