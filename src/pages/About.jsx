@@ -15,7 +15,7 @@ function About() {
             <h1 className="about-title">About Me</h1>
             <p className="about-text">
               Hello! I'm <strong>Sasha</strong>, a passionate web developer with a love for creating
-              beautiful and functional websites. With a background in computer science and design,
+              beautiful and functional websites. With a background in programming and design,
               I enjoy combining technical skills with creativity to build engaging user experiences.
             </p>
 
