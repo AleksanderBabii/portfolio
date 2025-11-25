@@ -62,5 +62,13 @@
     "imageUrl": "images/BoredWebpage.png",
     "technologies": ["HTML", "CSS", "JavaScript", "API"],
     "projectUrl": "https://im-bored-webpage.onrender.com/"
+  },
+  {
+    "id": 9,
+    "title": "Rock Band Webpage",
+    "description": "A promotional website for the rock band 'Грим та Грім'.",
+    "imageUrl": "images/RockBandWebpage.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "projectUrl": "https://aleksanderbabii.github.io/Rock-Band_Webpage/"
   }
 ]
