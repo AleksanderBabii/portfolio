@@ -70,5 +70,13 @@
     "imageUrl": "images/RockBandWebpage.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "projectUrl": "https://aleksanderbabii.github.io/Rock-Band_Webpage/"
+  },
+  {
+    "id": 10,
+    "title": "Notes App",
+    "description": "A simple and intuitive notes application built with React.",
+    "imageUrl": "images/notes-app.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "React"],
+    "projectUrl": "https://aleksanderbabii.github.io/The-Notes-App/"
   }
 ]
