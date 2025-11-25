@@ -52,7 +52,11 @@ To build and run using Docker:
 docker build -t my-app .
 
 # Run the container
+# If your production server runs on port 3000 (default):
 docker run -p 3000:3000 my-app
+
+# If your production server runs on port 5173, use:
+# docker run -p 5173:5173 my-app
 ```
 
 The containerized application can be deployed to any platform that supports Docker, including:
@@ -64,7 +68,7 @@ The containerized application can be deployed to any platform that supports Dock
 - Fly.io
 - Railway
 
-### DIY Deployment
+Make sure to deploy the contents of the `build/` directory (including both `build/client/` for static assets and `build/server/` for server-side code), along with your `package.json` and lock file, after running `npm run build`.
 
 If you're familiar with deploying Node applications, the built-in app server is production-ready.
 
