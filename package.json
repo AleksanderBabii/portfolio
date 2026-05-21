@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "npm run build && cp dist/index.html dist/404.html && gh-pages -d dist",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
