@@ -13,7 +13,7 @@
     "description": "A responsive website for a fictional dog service.",
     "imageUrl": "images/tindog.PNG",
     "technologies": ["HTML", "CSS", "JavaScript"],
-    "projectUrl": "https://todo-list-omega-eight.vercel.app/"
+    "projectUrl": "https://tindog-webpage.onrender.com"
   },
   {
     "id": 3,
