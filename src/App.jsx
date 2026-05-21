@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate} from "react-router-dom";
 
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -13,10 +13,8 @@ import "./styles/main.scss";
 
 
 function App() {
-  const basename = import.meta.env.MODE === "production" ? "/portfolio" : "/";
-
   return (
-    <BrowserRouter basename={basename}> 
+    <HashRouter>
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />
@@ -32,7 +30,7 @@ function App() {
 
         </Routes>
         <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
