@@ -1,224 +1,177 @@
-# Portfolio Website
+# Permalist Project
 
-A modern, responsive portfolio website built with **React**, **Vite**, and **SCSS** to showcase my projects, technical skills, and professional journey as a developer.
-
-🌐 **Live Website:**
-https://aleksanderbabii.github.io/portfolio/
+A simple and efficient task management application built with **Node.js**, **Express.js**, and **EJS**. The application allows users to create, view, and manage tasks through a clean and intuitive interface.
 
 ---
 
-## About
+## Overview
 
-This portfolio serves as a central place to present my work, experience, and technical abilities. The application is designed with a component-based architecture, making it scalable, maintainable, and easy to extend as new projects are added.
+Permalist is a lightweight web application designed to help users organize daily tasks and maintain productivity. The project demonstrates server-side rendering using EJS templates, Express routing, and modular project organization.
 
-The website includes dedicated sections for:
-
-* Home
-* About Me
-* Projects
-* Contact Information
+The application follows a structured MVC-inspired architecture, separating views, assets, and application logic for maintainability and scalability.
 
 ---
 
 ## Features
 
-* Responsive design for all screen sizes
-* Single Page Application (SPA)
-* Project showcase powered by JSON data
-* Reusable React components
-* Modular SCSS styling architecture
-* Smooth navigation between sections
-* Optimized build process using Vite
-* GitHub Pages deployment
+* Create and manage tasks
+* Dynamic page rendering with EJS
+* Reusable layout components using partials
+* Responsive user interface
+* Organized static assets
+* Clean and maintainable code structure
 
 ---
 
 ## Tech Stack
 
+### Backend
+
+* Node.js
+* Express.js
+
 ### Frontend
 
-* React
-* JavaScript (ES6+)
 * HTML5
-* SCSS
+* CSS3
+* EJS Templates
 
-### Tooling
+### Development Tools
 
-* Vite
 * npm
 * Git
-* GitHub Pages
+* GitHub
 
 ---
 
 ## Project Structure
 
-```text id="plte0x"
-portfolio/
+```text
+Permalist_Project/
 │
 ├── public/
-│   ├── images/
-│   └── favicon.ico
+│   ├── assets/
+│   │   └── icons/
+│   │       ├── check-solid.svg
+│   │       └── pencil-solid.svg
+│   │
+│   └── styles/
+│       └── main.css
 │
-├── src/
-│   ├── components/
-│   │   ├── Footer.jsx
-│   │   ├── HeroSection.jsx
-│   │   ├── Navbar.jsx
-│   │   └── ProjectCard.jsx
+├── views/
+│   ├── partials/
+│   │   ├── header.ejs
+│   │   └── footer.ejs
 │   │
-│   ├── data/
-│   │   └── projects.json
-│   │
-│   ├── pages/
-│   │   ├── Home.jsx
-│   │   ├── About.jsx
-│   │   ├── Projects.jsx
-│   │   └── Contact.jsx
-│   │
-│   ├── styles/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── _variables.scss
-│   │   ├── _mixins.scss
-│   │   ├── _animations.scss
-│   │   ├── _globals.scss
-│   │   └── main.scss
-│   │
-│   ├── App.jsx
-│   └── main.jsx
+│   └── index.ejs
 │
-├── dist/
-├── index.html
+├── index.js
+├── solution.js
+├── queries.sql
 ├── package.json
-├── vite.config.js
+├── package-lock.json
 └── README.md
 ```
 
 ---
 
-## Component Architecture
-
-### Reusable Components
-
-| Component   | Purpose                                   |
-| ----------- | ----------------------------------------- |
-| Navbar      | Main site navigation                      |
-| HeroSection | Landing section introducing the portfolio |
-| ProjectCard | Displays project information dynamically  |
-| Footer      | Site footer and additional links          |
-
-### Pages
-
-| Page     | Description                              |
-| -------- | ---------------------------------------- |
-| Home     | Landing page                             |
-| About    | Personal background and skills           |
-| Projects | Portfolio project showcase               |
-| Contact  | Contact information and networking links |
-
----
-
-## Getting Started
+## Installation
 
 ### Clone the Repository
 
-```bash id="n2xg0z"
-git clone https://github.com/AleksanderBabii/portfolio.git
+```bash
+git clone <repository-url>
 ```
 
 ### Navigate to the Project
 
-```bash id="t7kg22"
-cd portfolio
+```bash
+cd Permalist_Project
 ```
 
 ### Install Dependencies
 
-```bash id="mjlwmx"
+```bash
 npm install
 ```
 
-### Start Development Server
+---
 
-```bash id="jlwm58"
-npm run dev
+## Running the Application
+
+Start the development server:
+
+```bash
+node index.js
+```
+
+or
+
+```bash
+npm start
 ```
 
 Open your browser and visit:
 
-```text id="jlwm59"
-http://localhost:5173
+```text
+http://localhost:3000
 ```
 
 ---
 
-## Build for Production
+## Application Components
 
-Create an optimized production build:
+### Views
 
-```bash id="jlwm60"
-npm run build
-```
+The application uses EJS templates for rendering dynamic content.
 
-Preview the production version:
+| File       | Purpose               |
+| ---------- | --------------------- |
+| index.ejs  | Main application view |
+| header.ejs | Reusable page header  |
+| footer.ejs | Reusable page footer  |
 
-```bash id="jlwm61"
-npm run preview
-```
+### Assets
 
----
-
-## Managing Projects
-
-Projects are stored in:
-
-```text id="jlwm62"
-src/data/projects.json
-```
-
-Adding a new project only requires updating the JSON file, making the portfolio easy to maintain and scale.
+Custom styling and icons are stored within the `public` directory and served as static files.
 
 ---
 
-## Styling Architecture
+## Database
 
-The project uses a modular SCSS structure:
+The project includes a SQL file:
 
-* Global styles
-* Variables
-* Mixins
-* Animations
-* Page-specific styles
-* Component-specific styles
+```text
+queries.sql
+```
 
-This approach improves maintainability and encourages reusable design patterns.
+This file contains database queries used by the application and can be used to initialize or manage the required database structure.
+
+---
+
+## Learning Objectives
+
+This project was created to practice:
+
+* Express.js fundamentals
+* Server-side rendering with EJS
+* Template partials and reusable layouts
+* Routing and middleware
+* Static file serving
+* SQL database integration
+* Full-stack application structure
 
 ---
 
 ## Future Improvements
 
-* Dark mode support
-* Enhanced animations
-* Project filtering and search
-* Blog section
-* Contact form integration
-* Accessibility improvements
-* Internationalization support
-
----
-
-## Lessons Learned
-
-This project helped strengthen my understanding of:
-
-* React component architecture
-* Data-driven UI development
-* SCSS organization and scalability
-* Responsive web design
-* Vite build tooling
-* GitHub Pages deployment
-* Frontend project structure best practices
+* User authentication
+* Task categories
+* Task deadlines and reminders
+* Task completion tracking
+* Database optimization
+* Search and filtering functionality
+* REST API support
 
 ---
 
@@ -228,17 +181,10 @@ This project helped strengthen my understanding of:
 
 GitHub: https://github.com/AleksanderBabii
 
-Portfolio: https://aleksanderbabii.github.io/portfolio/
-
-LinkedIn: www.linkedin.com/in/aleksanderanczypoliwski
-
 ---
 
 ## License
 
-This project is open-source and available under the MIT License.
+This project is licensed under the MIT License.
 
-```
-
-⭐ If you found this project interesting, consider starring the repository.
-```
+Feel free to use, modify, and learn from this project.
