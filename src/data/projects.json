@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Project Flow",
     "description": "A Trello-inspired project management application.",
-    "imageUrl": "images/BoredWebpage.png",
+    "imageUrl": "images/ProjectFlow.png",
     "technologies": ["React","TypeScript","Vite","SCSS Modules","Node.js","Express.js","PostgreSQL","Prisma ORM"],
     "projectUrl": "https://project-flow-lac.vercel.app/"
   },
