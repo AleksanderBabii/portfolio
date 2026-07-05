@@ -1,6 +1,52 @@
 [
   {
     "id": 1,
+    "title": "Project Flow",
+    "description": "A Trello-inspired project management application that allows users to manage boards and tasks using a Kanban workflow. Built with authentication, drag and drop functionality, dashboard statistics, dark mode and responsive design.",
+    "imageUrl": "images/ProjectFlow.png",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "SCSS Modules",
+      "React Router",
+      "React Hook Form",
+      "Zod",
+      "TanStack React Query",
+      "Zustand",
+      "Axios",
+      "dnd-kit",
+      "React Hot Toast",
+      "React Icons"
+    ],
+
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "TypeScript",
+      "REST API",
+      "JWT Authentication",
+      "bcrypt"
+    ],
+
+    "database": ["PostgreSQL", "Prisma ORM", "Prisma Migrations"],
+
+    "tools": [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Postman",
+      "Prisma Studio",
+      "ESLint",
+      "npm"
+    ],
+
+    "deployment": ["Vercel", "Render", "Neon PostgreSQL"],
+    "projectUrl": "https://project-flow-lac.vercel.app/"
+  },
+
+  {
+    "id": 2,
     "title": "Weather App",
     "description": "A React app that shows live weather data.",
     "imageUrl": "images/WeatherBroadcast.png",
@@ -8,7 +54,7 @@
     "projectUrl": "https://weather-broadcast-webpage.onrender.com/"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Tin Dog Website",
     "description": "A responsive website for a fictional dog service.",
     "imageUrl": "images/tindog.PNG",
@@ -16,7 +62,7 @@
     "projectUrl": "https://tindog-webpage.onrender.com"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Move It Startup Landing Page",
     "description": "A landing page for a transportation startup.",
     "imageUrl": "images/moveit.PNG",
@@ -24,7 +70,7 @@
     "projectUrl": "https://move-it-start-up-webpage.onrender.com/"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Blog Website",
     "description": "A blog website template with modern design.",
     "imageUrl": "images/MyBlog.PNG",
@@ -32,7 +78,7 @@
     "projectUrl": "https://blog-webpage-5ixx.onrender.com/"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Simon Game",
     "description": "A classic Simon game implemented in JavaScript.",
     "imageUrl": "images/SimonGame.png",
@@ -40,7 +86,7 @@
     "projectUrl": "https://lexrift.itch.io/simon-game"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Drum Kit Webpage",
     "description": "A fun drum kit application that plays sounds on keypress.",
     "imageUrl": "images/DrumKit.png",
@@ -48,7 +94,7 @@
     "projectUrl": "https://lexrift.itch.io/drum-kit"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Journey Across Realms",
     "description": "An adventure game developed using Unity.",
     "imageUrl": "images/JAR.png",
@@ -56,7 +102,7 @@
     "projectUrl": "https://lexrift.itch.io/jar"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "I'm Bored",
     "description": "A boredom buster app that suggests activities.",
     "imageUrl": "images/BoredWebpage.png",
@@ -64,7 +110,7 @@
     "projectUrl": "https://im-bored-webpage.onrender.com/"
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Rock Band Webpage",
     "description": "A promotional website for the rock band 'Грим та Грім'.",
     "imageUrl": "images/RockBandWebpage.png",
@@ -72,7 +118,7 @@
     "projectUrl": "https://aleksanderbabii.github.io/Rock-Band_Webpage/"
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Notes App",
     "description": "A simple and intuitive notes application built with React.",
     "imageUrl": "images/notes-app.png",
