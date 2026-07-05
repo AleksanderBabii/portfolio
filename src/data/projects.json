@@ -2,46 +2,19 @@
   {
     "id": 1,
     "title": "Project Flow",
-    "description": "A Trello-inspired project management application that allows users to manage boards and tasks using a Kanban workflow. Built with authentication, drag and drop functionality, dashboard statistics, dark mode and responsive design.",
+    "description": "A Trello-inspired project management application.",
     "imageUrl": "images/ProjectFlow.png",
     "technologies": [
       "React",
       "TypeScript",
       "Vite",
       "SCSS Modules",
-      "React Router",
-      "React Hook Form",
-      "Zod",
-      "TanStack React Query",
-      "Zustand",
-      "Axios",
-      "dnd-kit",
-      "React Hot Toast",
-      "React Icons"
-    ],
-
-    "backend": [
       "Node.js",
       "Express.js",
       "TypeScript",
-      "REST API",
-      "JWT Authentication",
-      "bcrypt"
+      "PostgreSQL",
+      "Prisma ORM"
     ],
-
-    "database": ["PostgreSQL", "Prisma ORM", "Prisma Migrations"],
-
-    "tools": [
-      "Git",
-      "GitHub",
-      "VS Code",
-      "Postman",
-      "Prisma Studio",
-      "ESLint",
-      "npm"
-    ],
-
-    "deployment": ["Vercel", "Render", "Neon PostgreSQL"],
     "projectUrl": "https://project-flow-lac.vercel.app/"
   },
 
