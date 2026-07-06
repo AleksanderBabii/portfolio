@@ -1,6 +1,14 @@
 [
-  {
+    {
     "id": 1,
+    "title": "Project Flow",
+    "description": "A Trello-inspired project management application.",
+    "imageUrl": "images/projectflow.jpg",
+    "technologies": ["React","TypeScript","Vite","SCSS Modules","Node.js","Express.js","PostgreSQL","Prisma ORM"],
+    "projectUrl": "https://project-flow-lac.vercel.app/"
+  },
+  {
+    "id": 2,
     "title": "Weather App",
     "description": "A React app that shows live weather data.",
     "imageUrl": "images/WeatherBroadcast.png",
@@ -8,7 +16,7 @@
     "projectUrl": "https://weather-broadcast-webpage.onrender.com/"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Tin Dog Website",
     "description": "A responsive website for a fictional dog service.",
     "imageUrl": "images/tindog.PNG",
@@ -16,7 +24,7 @@
     "projectUrl": "https://tindog-webpage.onrender.com"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Move It Startup Landing Page",
     "description": "A landing page for a transportation startup.",
     "imageUrl": "images/moveit.PNG",
@@ -24,7 +32,7 @@
     "projectUrl": "https://move-it-start-up-webpage.onrender.com/"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Blog Website",
     "description": "A blog website template with modern design.",
     "imageUrl": "images/MyBlog.PNG",
@@ -32,7 +40,7 @@
     "projectUrl": "https://blog-webpage-5ixx.onrender.com/"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Simon Game",
     "description": "A classic Simon game implemented in JavaScript.",
     "imageUrl": "images/SimonGame.png",
@@ -40,7 +48,7 @@
     "projectUrl": "https://lexrift.itch.io/simon-game"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Drum Kit Webpage",
     "description": "A fun drum kit application that plays sounds on keypress.",
     "imageUrl": "images/DrumKit.png",
@@ -48,7 +56,7 @@
     "projectUrl": "https://lexrift.itch.io/drum-kit"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Journey Across Realms",
     "description": "An adventure game developed using Unity.",
     "imageUrl": "images/JAR.png",
@@ -56,20 +64,12 @@
     "projectUrl": "https://lexrift.itch.io/jar"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "I'm Bored",
     "description": "A boredom buster app that suggests activities.",
     "imageUrl": "images/BoredWebpage.png",
     "technologies": ["HTML", "CSS", "JavaScript", "API"],
     "projectUrl": "https://im-bored-webpage.onrender.com/"
-  },
-  {
-    "id": 9,
-    "title": "Rock Band Webpage",
-    "description": "A promotional website for the rock band 'Грим та Грім'.",
-    "imageUrl": "images/RockBandWebpage.png",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "projectUrl": "https://aleksanderbabii.github.io/Rock-Band_Webpage/"
   },
   {
     "id": 10,
@@ -78,13 +78,5 @@
     "imageUrl": "images/notes-app.png",
     "technologies": ["HTML", "CSS", "JavaScript", "React"],
     "projectUrl": "https://aleksanderbabii.github.io/The-Notes-App/"
-  },
-    {
-    "id": 11,
-    "title": "Project Flow",
-    "description": "A Trello-inspired project management application.",
-    "imageUrl": "images/projectflow.jpg",
-    "technologies": ["React","TypeScript","Vite","SCSS Modules","Node.js","Express.js","PostgreSQL","Prisma ORM"],
-    "projectUrl": "https://project-flow-lac.vercel.app/"
   }
 ]
