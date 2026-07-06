@@ -1,12 +1,22 @@
 [
-    {
+  {
     "id": 1,
     "title": "Project Flow",
     "description": "A Trello-inspired project management application.",
     "imageUrl": "images/projectflow.jpg",
-    "technologies": ["React","TypeScript","Vite","SCSS Modules","Node.js","Express.js","PostgreSQL","Prisma ORM"],
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "SCSS Modules",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma ORM"
+    ],
     "projectUrl": "https://project-flow-lac.vercel.app/"
   },
+
   {
     "id": 2,
     "title": "Weather App",
@@ -73,6 +83,14 @@
   },
   {
     "id": 10,
+    "title": "Rock Band Webpage",
+    "description": "A promotional website for the rock band 'Грим та Грім'.",
+    "imageUrl": "images/RockBandWebpage.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "projectUrl": "https://aleksanderbabii.github.io/Rock-Band_Webpage/"
+  },
+  {
+    "id": 11,
     "title": "Notes App",
     "description": "A simple and intuitive notes application built with React.",
     "imageUrl": "images/notes-app.png",
