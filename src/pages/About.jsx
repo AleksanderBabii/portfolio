@@ -8,14 +8,14 @@ function About() {
       <section className="about-section container">
         <div className="about-content">
           <div className="about-image">
-            <img src={profileImg} alt="Sasha portrait" />
+            <img src={profileImg} alt="Aleksander portrait" />
           </div>
 
           <div className="about-text-block">
             <h1 className="about-title">About Me</h1>
             <p className="about-text">
-              Hello! I'm <strong>Sasha</strong>, a passionate web developer with a love for creating
-              beautiful and functional websites. With a background in programming and design,
+              Hello! I'm <strong>Aleksander</strong>, a full-stack developer with a love for creating
+              beautiful and functional applications, websites, and games. With a background in programming and design,
               I enjoy combining technical skills with creativity to build engaging user experiences.
             </p>
 
