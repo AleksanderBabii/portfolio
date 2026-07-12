@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "npm run build && copy dist\\index.html dist\\404.html && git add -A && git commit -m \"chore: update dist\" || echo No changes && git push -u origin master && git subtree push --prefix dist origin gh-pages --force",
+    "deploy": "npm run build && copy dist\\index.html dist\\404.html && git add -A && git commit -m \"chore: update dist\" || echo No changes && git push -u origin master && git subtree push --prefix dist origin gh-pages",
     "preview": "vite preview",
     "predeploy": "npm run build"
   },
