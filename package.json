@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "npm run build && copy dist\\index.html dist\\404.html && gh-pages -d dist --repo https://github.com/AleksanderBabii/portfolio.git",
+    "deploy": "npm run build && copy dist\\index.html dist\\404.html && git add -A && git commit -m \"deploy: update gh-pages\" && git subtree push --prefix dist origin gh-pages",
     "preview": "vite preview",
     "predeploy": "npm run build"
   },
