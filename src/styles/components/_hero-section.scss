@@ -5,54 +5,124 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-
+  min-height: 100vh;
   color: $text-dark;
-  text-align: center;
-  padding: 0 2rem;
+  text-align: left;
+  padding: 8rem 1rem 4rem;
   overflow: hidden;
   position: relative;
   background: $background-light;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(12px);
+    pointer-events: none;
+  }
+
+  &::before {
+    width: 18rem;
+    height: 18rem;
+    top: 16%;
+    left: 8%;
+    background: rgba(249, 115, 22, 0.16);
+  }
+
+  &::after {
+    width: 22rem;
+    height: 22rem;
+    right: -4rem;
+    bottom: 10%;
+    background: rgba(56, 189, 248, 0.16);
+  }
+
   @include respond(md) {
     height: auto;
-    padding: 6rem 1rem;
+    padding: 7.5rem 1rem 3rem;
   }
 }
 
 .hero-content {
-  max-width: 800px;
+  position: relative;
+  z-index: 1;
+  width: min(100%, $narrow-width);
+  padding: clamp(2rem, 4vw, 3.25rem);
+  border-radius: $border-radius-lg;
+  @include glass-panel($surface-light, $border-light, $shadow-strong);
   animation: fade-up 0.8s ease both;
 
-  .header {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+  &::before {
+    content: "Available for freelance and junior roles";
+    display: inline-flex;
+    margin-bottom: 1.5rem;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(249, 115, 22, 0.12);
+    color: $accent-color;
+    font-size: 0.82rem;
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    color: $secondary-color;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .header {
+    max-width: 12ch;
+    font-size: clamp(3rem, 7vw, 5.75rem);
+    font-weight: 700;
+    line-height: 0.98;
+    margin-bottom: 1.25rem;
+    color: $primary-color;
+    text-wrap: balance;
   }
 
   .intro-info {
-    font-size: 1.125rem;
-    color: $secondary-color;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 58ch;
+    font-size: clamp(1.05rem, 2vw, 1.22rem);
+    color: $text-muted-light;
+    line-height: 1.8;
+  }
+
+  @include respond(md) {
+    text-align: center;
+
+    .header,
+    .intro-info {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include respond(sm) {
+    padding: 1.6rem;
+
+    &::before {
+      margin-bottom: 1rem;
+      font-size: 0.75rem;
+    }
+
+    .header {
+      font-size: clamp(2.5rem, 14vw, 4rem);
+    }
   }
 }
 
-// Dark mode
 body.dark-mode {
   .hero-section {
     background: $background-dark;
-      
     color: $text-dark;
+  }
+
+  .hero-content {
+    @include glass-panel($surface-dark, $border-dark, $shadow-dark);
 
     .header {
-      color: $bg-light;
+      color: $text-dark;
     }
 
     .intro-info {
-      color: $text-dark;
+      color: $text-muted-dark;
     }
   }
 }

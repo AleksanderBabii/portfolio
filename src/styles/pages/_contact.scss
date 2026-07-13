@@ -5,31 +5,31 @@
   display: grid;
   place-items: center;
   min-height: 100vh;
-  background: $background-light;
+  background: transparent;
   color: $text-light;
-  text-align: center;
-  padding: 3rem 2rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: left;
+  padding: 8.5rem 1rem $section-padding;
+  @include transition(background, color);
 }
 
 .contact-container {
-  max-width: 600px;
+  max-width: 760px;
   width: 100%;
-  background: $secondary-color;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-  padding: 2.5rem;
+  @include glass-panel($surface-light, $border-light, $shadow-strong);
+  border-radius: $border-radius-lg;
+  padding: clamp(2rem, 4vw, 3rem);
   animation: fadeIn 0.8s ease-out;
 
   h1 {
     color: $primary-color;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin-bottom: 0.85rem;
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1.06rem;
     margin-bottom: 2rem;
+    color: $text-muted-light;
   }
 
   .contact-list {
@@ -40,10 +40,16 @@
     gap: 1.2rem;
 
     li {
+      padding: 1.1rem 1.2rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid rgba(255, 255, 255, 0.36);
       font-size: 1rem;
       color: $text-light;
 
       span {
+        display: inline-block;
+        min-width: 6rem;
         font-weight: 600;
         color: $primary-color;
         margin-right: 0.5rem;
@@ -51,38 +57,54 @@
 
       a {
         color: $accent-color;
-        text-decoration: none;
         font-weight: 500;
-        transition: color 0.3s ease;
+        @include transition(color);
 
         &:hover {
           color: $primary-color;
-          text-decoration: underline;
         }
       }
     }
   }
+
+  @include respond(sm) {
+    text-align: center;
+
+    .contact-list li span {
+      display: block;
+      min-width: auto;
+      margin: 0 0 0.45rem;
+    }
+  }
 }
 
-// 🌙 Dark Mode
 body.dark-mode {
   .contact-section {
-    background: $background-dark;
     color: $text-dark;
   }
 
   .contact-container {
-    background-color: $card-bg-dark;
-    box-shadow: $shadow-light;
+    @include glass-panel($surface-dark, $border-dark, $shadow-dark);
 
     h1 {
       color: $text-dark;
     }
 
-    .contact-list li span {
-      color: $text-dark;
+    p {
+      color: $text-muted-dark;
     }
-    .phone-number{
+
+    .contact-list li {
+      background: rgba(15, 23, 42, 0.52);
+      border-color: rgba(255, 255, 255, 0.06);
+      color: $text-dark;
+
+      span {
+        color: $text-dark;
+      }
+    }
+
+    .phone-number {
       color: $text-dark;
     }
 

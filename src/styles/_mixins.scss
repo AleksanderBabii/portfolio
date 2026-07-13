@@ -9,17 +9,36 @@
 @mixin container {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 0 $spacing-unit;
+  width: min(calc(100% - 2rem), $max-width);
 }
 
-// Allows multiple comma-separated properties (background-color, color)
 @mixin transition($properties...) {
   transition: $properties $transition-time $transition-ease;
+}
+
+@mixin glass-panel($background, $border-color, $shadow: $shadow-soft) {
+  background: $background;
+  border: 1px solid $border-color;
+  box-shadow: $shadow;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 @mixin respond($breakpoint) {
   @if $breakpoint == mobile {
     @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media (max-width: 640px) {
       @content;
     }
   }

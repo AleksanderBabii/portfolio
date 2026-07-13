@@ -1,57 +1,60 @@
-// 🎨 Colors
-$primary-color: #0577f8d9;
-$secondary-color: #ffffff;
-$accent-color: #00c3ff;
-$active-color-light: #0577f8d9;
-$active-color-dark: #c0bbf5;
+$primary-color: #0f172a;
+$secondary-color: #f8fafc;
+$accent-color: #f97316;
+$accent-soft: #fed7aa;
+$active-color-light: #ea580c;
+$active-color-dark: #fdba74;
 
-$bg-light: #ffffff;
-$bg-dark: #121212;
-$text-light: #000000;
-$text-dark: #ffffff;
+$bg-light: #f4efe8;
+$bg-dark: #0b1120;
+$surface-light: rgba(255, 255, 255, 0.78);
+$surface-strong-light: rgba(255, 255, 255, 0.92);
+$surface-dark: rgba(15, 23, 42, 0.78);
+$surface-strong-dark: rgba(15, 23, 42, 0.92);
+$text-light: #162033;
+$text-dark: #e5eefc;
+$text-muted-light: #55627a;
+$text-muted-dark: #a7b4c9;
+$border-light: rgba(148, 163, 184, 0.22);
+$border-dark: rgba(226, 232, 240, 0.12);
 
-$background-light:  
-    linear-gradient(
-      to right bottom,
-      #0577f8d9,
-      #c0bbf5
-    ),
-    url("/images/hero-bg.jpg") center/cover no-repeat;
+$background-light:
+  radial-gradient(circle at top left, rgba(249, 115, 22, 0.18), transparent 30%),
+  radial-gradient(circle at 85% 15%, rgba(14, 165, 233, 0.18), transparent 24%),
+  linear-gradient(135deg, #fff8f1 0%, #f7fafc 45%, #eef4ff 100%);
 
-$background-dark: 
-    linear-gradient(
-      to right bottom,
-        rgba(18, 18, 18, 0.9),
-        rgba(18, 18, 18, 0.7)
-      ),
-      url("/images/hero-bg-dark.jpg") center/cover no-repeat;
+$background-dark:
+  radial-gradient(circle at top left, rgba(249, 115, 22, 0.2), transparent 28%),
+  radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.16), transparent 22%),
+  linear-gradient(135deg, #020617 0%, #0f172a 45%, #111827 100%);
 
-//Footer
-$footer-bg-light:$secondary-color;
-$card-border-light: $secondary-color;
-$card-bg-dark: #073c49;
-$footer-bg-dark:$primary-color;
-$card-border-dark:$bg-light;
+$footer-bg-light: rgba(15, 23, 42, 0.96);
+$card-border-light: rgba(255, 255, 255, 0.08);
+$card-bg-dark: rgba(15, 23, 42, 0.82);
+$footer-bg-dark: rgba(2, 6, 23, 0.98);
+$card-border-dark: rgba(255, 255, 255, 0.14);
 
-//Button
-$button-hover-bg-color: #108ead;
+$button-hover-bg-color: #fb923c;
 
-// 🧱 Layout
 $max-width: 1200px;
-$border-radius: 8px;
+$narrow-width: 1040px;
+$border-radius: 24px;
+$border-radius-lg: 32px;
 $spacing-unit: 1rem;
+$section-padding: clamp(5rem, 8vw, 7rem);
+$max-content-width: 1200px;
 
-// ✍️ Typography
-$font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-heading: "Space Grotesk", "Segoe UI", sans-serif;
+$font-family-base: "DM Sans", "Segoe UI", sans-serif;
 $font-size-base: 16px;
-$line-height-base: 1.5;
-$max-content-width: 100%;
+$line-height-base: 1.6;
 
-// 🕓 Transitions & shadows
 $transition-time: 0.3s;
-$transition-ease: ease-in-out;
-$box-shadow-base: 0 4px 6px rgba(0, 0, 0, 0.1);
-$shadow-dark: #2c2c2c;
-$shadow-light:#c7c7c7;
-$box-shadow: #3b3a3a;
+$transition-ease: ease;
+$shadow-soft: 0 20px 50px rgba(15, 23, 42, 0.08);
+$shadow-strong: 0 30px 80px rgba(15, 23, 42, 0.14);
+$shadow-dark: 0 30px 70px rgba(2, 6, 23, 0.55);
+$shadow-light: 0 16px 36px rgba(15, 23, 42, 0.14);
+$box-shadow-base: $shadow-soft;
+$box-shadow: $shadow-soft;
 

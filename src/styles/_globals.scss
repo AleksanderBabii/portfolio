@@ -1,24 +1,37 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: $bg-light;
+  min-width: 320px;
+  background: $background-light;
   color: $text-light;
   font-family: $font-family-base;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  @include transition(background-color, color);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  @include transition(background, color);
 }
 
 body.dark-mode {
-  background-color: $bg-dark;
+  background: $background-dark;
   color: $text-dark;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 a {
@@ -26,7 +39,39 @@ a {
   color: inherit;
 }
 
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+main,
+section {
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-family-heading;
+  letter-spacing: -0.03em;
+}
+
+p {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(249, 115, 22, 0.24);
+}
+
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
