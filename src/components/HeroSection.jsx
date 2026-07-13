@@ -13,7 +13,7 @@ function HeroSection() {
         >
             <h1 className="header">Welcome to My Webpage</h1>
             
-            <p className="intro-info">I'm Sasha, a passionate developer creating amazing web experiences.</p>
+            <p className="intro-info">I'm Aleksander, a Junior Full-Stack .NET Developer. </p>
         </motion.div>
     </section>
   );
