@@ -45,17 +45,17 @@
       place-items: center;
       width: 2.9rem;
       height: 2.9rem;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(148, 163, 184, 0.16);
       color: $secondary-color;
       font-size: 1.05rem;
       @include transition(color, transform, background-color, border-color);
 
       &:hover {
         color: $secondary-color;
-        background: rgba(249, 115, 22, 0.18);
-        border-color: rgba(249, 115, 22, 0.32);
+        background: rgba(37, 99, 235, 0.18);
+        border-color: rgba(96, 165, 250, 0.32);
         transform: translateY(-3px);
       }
     }

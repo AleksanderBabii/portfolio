@@ -1,7 +1,7 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -22,12 +22,35 @@ body {
   line-height: $line-height-base;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
   @include transition(background, color);
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+      linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 88%);
+    opacity: 0.8;
+  }
 }
 
 body.dark-mode {
   background: $background-dark;
   color: $text-dark;
+
+  &::before {
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  }
 }
 
 #root {
@@ -59,7 +82,7 @@ h2,
 h3,
 h4 {
   font-family: $font-family-heading;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.05em;
 }
 
 p {
@@ -67,7 +90,7 @@ p {
 }
 
 ::selection {
-  background: rgba(249, 115, 22, 0.24);
+  background: rgba(37, 99, 235, 0.24);
 }
 
 img {

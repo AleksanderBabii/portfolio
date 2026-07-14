@@ -19,6 +19,16 @@
   text-align: left;
   border-radius: $border-radius-lg;
   @include glass-panel($surface-light, $border-light, $shadow-strong);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), transparent 45%);
+    pointer-events: none;
+  }
 
   @include respond(mobile) {
     padding: 1.5rem;
@@ -44,14 +54,14 @@
   img {
     width: min(100%, 420px);
     aspect-ratio: 4 / 5;
-    border-radius: 28px;
+    border-radius: 22px;
     object-fit: cover;
     box-shadow: $shadow-light;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(148, 163, 184, 0.22);
     @include transition(transform, box-shadow);
 
     &:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
       box-shadow: $shadow-strong;
     }
 
@@ -70,7 +80,9 @@
   font-size: clamp(2.2rem, 4vw, 3.5rem);
   margin-bottom: 1.25rem;
   color: $primary-color;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
 
   body.dark-mode & {
     color: $text-dark;
@@ -83,6 +95,7 @@
   line-height: 1.85;
   color: $text-muted-light;
   max-width: 62ch;
+  letter-spacing: 0.01em;
 
   body.dark-mode & {
     color: $text-muted-dark;

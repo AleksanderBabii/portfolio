@@ -1,60 +1,60 @@
 $primary-color: #0f172a;
 $secondary-color: #f8fafc;
-$accent-color: #f97316;
-$accent-soft: #fed7aa;
-$active-color-light: #ea580c;
-$active-color-dark: #fdba74;
+$accent-color: #2563eb;
+$accent-soft: #bfdbfe;
+$active-color-light: #1d4ed8;
+$active-color-dark: #60a5fa;
 
-$bg-light: #f4efe8;
-$bg-dark: #0b1120;
-$surface-light: rgba(255, 255, 255, 0.78);
-$surface-strong-light: rgba(255, 255, 255, 0.92);
-$surface-dark: rgba(15, 23, 42, 0.78);
-$surface-strong-dark: rgba(15, 23, 42, 0.92);
-$text-light: #162033;
-$text-dark: #e5eefc;
-$text-muted-light: #55627a;
-$text-muted-dark: #a7b4c9;
-$border-light: rgba(148, 163, 184, 0.22);
-$border-dark: rgba(226, 232, 240, 0.12);
+$bg-light: #e9edf3;
+$bg-dark: #050816;
+$surface-light: rgba(248, 250, 252, 0.78);
+$surface-strong-light: rgba(248, 250, 252, 0.94);
+$surface-dark: rgba(8, 12, 24, 0.82);
+$surface-strong-dark: rgba(8, 12, 24, 0.94);
+$text-light: #122033;
+$text-dark: #e8eef8;
+$text-muted-light: #526175;
+$text-muted-dark: #9bacbf;
+$border-light: rgba(100, 116, 139, 0.2);
+$border-dark: rgba(148, 163, 184, 0.12);
 
 $background-light:
-  radial-gradient(circle at top left, rgba(249, 115, 22, 0.18), transparent 30%),
-  radial-gradient(circle at 85% 15%, rgba(14, 165, 233, 0.18), transparent 24%),
-  linear-gradient(135deg, #fff8f1 0%, #f7fafc 45%, #eef4ff 100%);
+  radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 32%),
+  radial-gradient(circle at 86% 14%, rgba(148, 163, 184, 0.16), transparent 26%),
+  linear-gradient(135deg, #f8fbff 0%, #edf2f7 44%, #e3e8ef 100%);
 
 $background-dark:
-  radial-gradient(circle at top left, rgba(249, 115, 22, 0.2), transparent 28%),
-  radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.16), transparent 22%),
-  linear-gradient(135deg, #020617 0%, #0f172a 45%, #111827 100%);
+  radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 30%),
+  radial-gradient(circle at 84% 16%, rgba(96, 165, 250, 0.12), transparent 22%),
+  linear-gradient(135deg, #02040d 0%, #0a1020 46%, #111827 100%);
 
-$footer-bg-light: rgba(15, 23, 42, 0.96);
-$card-border-light: rgba(255, 255, 255, 0.08);
-$card-bg-dark: rgba(15, 23, 42, 0.82);
-$footer-bg-dark: rgba(2, 6, 23, 0.98);
-$card-border-dark: rgba(255, 255, 255, 0.14);
+$footer-bg-light: rgba(8, 12, 24, 0.97);
+$card-border-light: rgba(255, 255, 255, 0.1);
+$card-bg-dark: rgba(8, 12, 24, 0.82);
+$footer-bg-dark: rgba(2, 4, 13, 0.98);
+$card-border-dark: rgba(255, 255, 255, 0.12);
 
-$button-hover-bg-color: #fb923c;
+$button-hover-bg-color: #1d4ed8;
 
 $max-width: 1200px;
 $narrow-width: 1040px;
-$border-radius: 24px;
-$border-radius-lg: 32px;
+$border-radius: 20px;
+$border-radius-lg: 28px;
 $spacing-unit: 1rem;
 $section-padding: clamp(5rem, 8vw, 7rem);
 $max-content-width: 1200px;
 
-$font-family-heading: "Space Grotesk", "Segoe UI", sans-serif;
-$font-family-base: "DM Sans", "Segoe UI", sans-serif;
+$font-family-heading: "Sora", "Segoe UI", sans-serif;
+$font-family-base: "IBM Plex Sans", "Segoe UI", sans-serif;
 $font-size-base: 16px;
 $line-height-base: 1.6;
 
 $transition-time: 0.3s;
 $transition-ease: ease;
-$shadow-soft: 0 20px 50px rgba(15, 23, 42, 0.08);
-$shadow-strong: 0 30px 80px rgba(15, 23, 42, 0.14);
-$shadow-dark: 0 30px 70px rgba(2, 6, 23, 0.55);
-$shadow-light: 0 16px 36px rgba(15, 23, 42, 0.14);
+$shadow-soft: 0 18px 44px rgba(8, 12, 24, 0.1);
+$shadow-strong: 0 30px 72px rgba(8, 12, 24, 0.18);
+$shadow-dark: 0 30px 70px rgba(2, 4, 13, 0.58);
+$shadow-light: 0 16px 34px rgba(8, 12, 24, 0.16);
 $box-shadow-base: $shadow-soft;
 $box-shadow: $shadow-soft;
 
