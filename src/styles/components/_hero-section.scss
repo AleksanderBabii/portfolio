@@ -17,7 +17,7 @@
   &::after {
     content: "";
     position: absolute;
-    border-radius: 50%;
+    border-radius: 26px;
     filter: blur(12px);
     pointer-events: none;
   }
@@ -27,7 +27,7 @@
     height: 18rem;
     top: 16%;
     left: 8%;
-    background: rgba(249, 115, 22, 0.16);
+    background: rgba(0, 163, 255, 0.2);
   }
 
   &::after {
@@ -35,7 +35,7 @@
     height: 22rem;
     right: -4rem;
     bottom: 10%;
-    background: rgba(56, 189, 248, 0.16);
+    background: rgba(99, 102, 241, 0.18);
   }
 
   @include respond(md) {
@@ -54,16 +54,16 @@
   animation: fade-up 0.8s ease both;
 
   &::before {
-    content: "Available for freelance and junior roles";
+    content: "Open to software engineering roles";
     display: inline-flex;
     margin-bottom: 1.5rem;
     padding: 0.55rem 0.9rem;
     border-radius: 999px;
-    background: rgba(249, 115, 22, 0.12);
+    background: rgba(0, 163, 255, 0.12);
     color: $accent-color;
     font-size: 0.82rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
