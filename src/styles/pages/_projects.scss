@@ -24,7 +24,7 @@
 .project-card {
   width: 100%;
   @include glass-panel($surface-light, $border-light, $shadow-soft);
-  border-radius: 28px;
+  border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
   display: flex;
@@ -36,7 +36,7 @@
   &:hover {
     transform: translateY(-10px);
     box-shadow: $shadow-strong;
-    border-color: rgba(249, 115, 22, 0.22);
+    border-color: rgba(0, 163, 255, 0.28);
   }
 
   .project-image {
@@ -73,16 +73,18 @@
       background: linear-gradient(135deg, $accent-color, $button-hover-bg-color);
       color: $secondary-color;
       padding: 0.8rem 1.25rem;
-      border-radius: 999px;
+      border-radius: 10px;
       font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
       text-align: center;
-      box-shadow: 0 12px 24px rgba(249, 115, 22, 0.2);
+      box-shadow: 0 12px 24px rgba(0, 119, 200, 0.24);
       @include transition(background-color, transform, box-shadow);
 
       &:hover {
         background: linear-gradient(135deg, $button-hover-bg-color, $accent-color);
         transform: translateY(-2px);
-        box-shadow: 0 18px 32px rgba(249, 115, 22, 0.26);
+        box-shadow: 0 18px 32px rgba(0, 119, 200, 0.34);
       }
     }
   }

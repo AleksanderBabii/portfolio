@@ -1,7 +1,7 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap");
 
 * {
   margin: 0;
@@ -59,7 +59,7 @@ h2,
 h3,
 h4 {
   font-family: $font-family-heading;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 p {
@@ -67,7 +67,7 @@ p {
 }
 
 ::selection {
-  background: rgba(249, 115, 22, 0.24);
+  background: rgba(0, 163, 255, 0.28);
 }
 
 img {
