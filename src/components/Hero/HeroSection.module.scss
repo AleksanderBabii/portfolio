@@ -1,0 +1,118 @@
+@use "../../styles/components/variables" as *;
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 8rem 6vw 5rem;
+
+  background: $primary-bg-color;
+  color: $text-color;
+
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: $max-content-width;
+
+  margin: 0 auto;
+}
+
+.label {
+  margin: 0 0 2rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  color: $secondary-text-color;
+}
+
+.title {
+  margin: 0;
+
+  font-family: $font-family-heading;
+
+  font-size: clamp(4rem, 10vw, 11rem);
+
+  line-height: 0.8;
+
+  letter-spacing: -0.07em;
+
+  font-weight: 500;
+}
+
+.title span {
+  color: $secondary-text-color;
+}
+
+.description {
+  max-width: 450px;
+
+  margin: 3rem 0 0 auto;
+
+  font-family: $font-family-base;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+
+  color: $secondary-text-color;
+}
+
+.scroll {
+  position: absolute;
+
+  bottom: 2rem;
+  left: 6vw;
+
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  color: $secondary-text-color;
+
+  font-size: 0.65rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+}
+
+.scroll::after {
+  content: "";
+
+  width: 50px;
+  height: 1px;
+
+  background: $accent-color;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 7rem 1.5rem 5rem;
+  }
+
+  .title {
+    font-size: 4.5rem;
+  }
+
+  .description {
+    margin: 3rem 0 0;
+  }
+
+  .scroll {
+    left: 1.5rem;
+  }
+}
+

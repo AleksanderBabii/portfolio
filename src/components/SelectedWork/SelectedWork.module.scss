@@ -1,0 +1,257 @@
+@use "../../styles/components/variables" as *;
+
+.work {
+  padding: 10rem 6vw;
+
+  background: $secondary-bg-color;
+
+  color: $text-color;
+}
+
+.header {
+  display: grid;
+
+  grid-template-columns: 1fr 2fr 1fr;
+
+  gap: 3rem;
+
+  align-items: end;
+
+  margin-bottom: 7rem;
+}
+
+.label {
+  margin: 0;
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  color: $secondary-text-color;
+}
+
+.header h2 {
+  margin: 0;
+
+  font-family: $font-family-heading;
+
+  font-size: clamp(4rem, 8vw, 9rem);
+
+  line-height: 0.8;
+
+  letter-spacing: -0.06em;
+}
+
+.header h2 span {
+  color: $secondary-text-color;
+}
+
+.intro {
+  margin: 0;
+
+  max-width: 280px;
+
+  font-family: $font-family-base;
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+
+  color: $secondary-text-color;
+}
+
+.projects {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 7rem 2rem;
+}
+
+.project {
+  cursor: pointer;
+}
+
+.project.featured {
+  grid-column: 1 / -1;
+}
+
+.imageWrapper {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  background: $card-bg-color;
+
+  text-decoration: none;
+}
+
+.project.featured .imageWrapper {
+  aspect-ratio: 21 / 9;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  filter: grayscale(15%);
+
+  transition:
+    transform $transition-time $transition-ease,
+    filter $transition-time $transition-ease;
+}
+
+.project:hover .image {
+  transform: scale(1.03);
+
+  filter: grayscale(0%);
+}
+
+.overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(5, 31, 32, 0.75);
+
+  opacity: 0;
+
+  transition: opacity $transition-time $transition-ease;
+}
+
+.overlay a {
+  padding: 1rem 1.5rem;
+
+  border: 1px solid $secondary-text-color;
+
+  color: $text-color;
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  text-decoration: none;
+
+  transition:
+    background $transition-time $transition-ease,
+    color $transition-time $transition-ease;
+}
+
+.overlay a:hover {
+  background: $secondary-text-color;
+
+  color: $primary-bg-color;
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.info {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 3rem;
+
+  padding-top: 1.5rem;
+}
+
+.projectNumber {
+  margin: 0 0 0.5rem;
+
+  font-size: 0.7rem;
+
+  color: $secondary-text-color;
+}
+
+.info h3 {
+  margin: 0;
+
+  font-family: $font-family-heading;
+
+  font-size: 1.5rem;
+
+  letter-spacing: -0.02em;
+}
+
+.category {
+  margin: 0.6rem 0 0;
+
+  font-size: 0.75rem;
+
+  color: $secondary-text-color;
+}
+
+.description {
+  max-width: 300px;
+
+  margin: 0;
+
+  font-size: 0.85rem;
+
+  line-height: 1.6;
+
+  color: $secondary-text-color;
+}
+
+@media (max-width: 900px) {
+  .header {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+
+    gap: 5rem;
+  }
+
+  .project.featured {
+    grid-column: auto;
+  }
+
+  .project.featured .imageWrapper {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 600px) {
+  .work {
+    padding: 7rem 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 4rem;
+  }
+
+  .header h2 {
+    font-size: 4rem;
+  }
+
+  .info {
+    flex-direction: column;
+
+    gap: 1.5rem;
+  }
+}

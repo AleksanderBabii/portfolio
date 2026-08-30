@@ -1,0 +1,232 @@
+@use "../../../styles/components/variables" as *;
+
+.technical {
+  padding: 10rem 6vw;
+
+  background: $primary-bg-color;
+
+  color: $text-color;
+}
+
+.header {
+  display: grid;
+
+  grid-template-columns: 1fr 2fr 1fr;
+
+  gap: 3rem;
+
+  align-items: end;
+
+  margin-bottom: 7rem;
+}
+
+.label {
+  margin: 0;
+
+  font-size: 0.7rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  color: $secondary-text-color;
+}
+
+.header h2 {
+  margin: 0;
+
+  font-family: $font-family-heading;
+
+  font-size: clamp(4rem, 7vw, 8rem);
+
+  line-height: 0.8;
+
+  letter-spacing: -0.06em;
+}
+
+.header h2 span {
+  color: $secondary-text-color;
+}
+
+.intro {
+  margin: 0;
+
+  max-width: 300px;
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+
+  color: $secondary-text-color;
+}
+
+.content {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr;
+
+  gap: 8rem;
+}
+
+.groups {
+  border-top: 1px solid rgba(142, 182, 155, 0.2);
+}
+
+.group {
+  display: grid;
+
+  grid-template-columns: 60px 1fr 1fr;
+
+  gap: 2rem;
+
+  padding: 2.5rem 0;
+
+  border-bottom: 1px solid rgba(142, 182, 155, 0.2);
+}
+
+.number {
+  font-size: 0.7rem;
+
+  color: $secondary-text-color;
+}
+
+.group h3 {
+  margin: 0;
+
+  font-family: $font-family-heading;
+
+  font-size: 1.2rem;
+
+  font-weight: 500;
+
+  letter-spacing: -0.02em;
+}
+
+.group ul {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.6rem 1.5rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.group li {
+  color: $secondary-text-color;
+
+  font-size: 0.8rem;
+}
+
+.group li::before {
+  content: "—";
+
+  margin-right: 0.5rem;
+
+  color: $accent-color;
+}
+
+.statement {
+  align-self: end;
+
+  padding: 2rem 0;
+}
+
+.statementLabel {
+  margin: 0 0 2rem;
+
+  font-size: 0.65rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  color: $secondary-text-color;
+}
+
+.statementText {
+  margin: 0;
+
+  max-width: 500px;
+
+  font-family: $font-family-base;
+
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+
+  line-height: 1.5;
+
+  letter-spacing: -0.02em;
+
+  color: $text-color;
+}
+
+.workflow {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.8rem;
+
+  margin-top: 3rem;
+
+  color: $secondary-text-color;
+
+  font-size: 0.65rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+}
+
+.workflow span:nth-child(even) {
+  color: $accent-color;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .technical {
+    padding: 7rem 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 5rem;
+  }
+
+  .header h2 {
+    font-size: 4rem;
+  }
+
+  .group {
+    grid-template-columns: 40px 1fr;
+
+    gap: 1rem;
+  }
+
+  .group ul {
+    grid-column: 2;
+  }
+
+  .statementText {
+    font-size: 1.2rem;
+  }
+
+  .workflow {
+    line-height: 1.8;
+  }
+}

@@ -1,0 +1,184 @@
+@use "../../../styles/components/variables" as *;
+
+.skills {
+  padding: 10rem 6vw;
+
+  background: $secondary-bg-color;
+
+  color: $text-color;
+}
+
+.header {
+  display: grid;
+
+  grid-template-columns: 1fr 2fr 1fr;
+
+  gap: 3rem;
+
+  align-items: end;
+
+  margin-bottom: 7rem;
+}
+
+.label {
+  margin: 0;
+
+  font-size: 0.7rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  color: $secondary-text-color;
+}
+
+.header h2 {
+  margin: 0;
+
+  font-family: $font-family-heading;
+
+  font-size: clamp(4rem, 8vw, 9rem);
+
+  line-height: 0.8;
+
+  letter-spacing: -0.06em;
+}
+
+.header h2 span {
+  color: $secondary-text-color;
+}
+
+.intro {
+  margin: 0;
+
+  max-width: 280px;
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+
+  color: $secondary-text-color;
+}
+
+.skillList {
+  border-top: 1px solid rgba(142, 182, 155, 0.2);
+}
+
+.skillGroup {
+  display: grid;
+
+  grid-template-columns: 80px 1fr 1fr;
+
+  gap: 3rem;
+
+  align-items: start;
+
+  padding: 3rem 0;
+
+  border-bottom: 1px solid rgba(142, 182, 155, 0.2);
+
+  transition: padding-left $transition-time $transition-ease;
+}
+
+.skillGroup:hover {
+  padding-left: 1rem;
+}
+
+.number {
+  font-size: 0.7rem;
+
+  color: $secondary-text-color;
+}
+
+.skillGroup h3 {
+  margin: 0;
+
+  font-family: $font-family-heading;
+
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+
+  font-weight: 500;
+
+  letter-spacing: -0.03em;
+}
+
+.skillGroup ul {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 0.8rem 2rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.skillGroup li {
+  color: $secondary-text-color;
+
+  font-size: 0.85rem;
+
+  line-height: 1.5;
+}
+
+.skillGroup li::before {
+  content: "—";
+
+  margin-right: 0.6rem;
+
+  color: $accent-color;
+}
+
+@media (max-width: 900px) {
+  .header {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .skillGroup {
+    grid-template-columns: 50px 1fr;
+
+    gap: 2rem;
+  }
+
+  .skillGroup ul {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills {
+    padding: 7rem 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 5rem;
+  }
+
+  .header h2 {
+    font-size: 4rem;
+  }
+
+  .skillGroup {
+    grid-template-columns: 40px 1fr;
+
+    gap: 1rem;
+
+    padding: 2rem 0;
+  }
+
+  .skillGroup h3 {
+    font-size: 1.5rem;
+  }
+
+  .skillGroup ul {
+    grid-column: 2;
+
+    grid-template-columns: 1fr;
+
+    gap: 0.6rem;
+  }
+}

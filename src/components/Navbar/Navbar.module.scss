@@ -1,0 +1,315 @@
+@use "../../styles/components/variables" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 4vw;
+
+  box-sizing: border-box;
+
+  z-index: 1000;
+
+  background: rgba(5, 31, 32, 0.92);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(142, 182, 155, 0.12);
+
+  transition:
+    background $transition-time $transition-ease,
+    border-color $transition-time $transition-ease;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo {
+  flex-shrink: 0;
+
+  margin-right: auto;
+}
+
+.navbar-logo a {
+  color: $text-color;
+
+  font-family: $font-family-heading;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: color $transition-time $transition-ease;
+}
+
+.navbar-logo a:hover {
+  color: $secondary-text-color;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar-links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: clamp(1.2rem, 2.5vw, 2.5rem);
+
+  margin: 0 auto;
+}
+
+.nav-link {
+  position: relative;
+
+  color: $secondary-text-color;
+
+  font-size: 0.7rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color $transition-time $transition-ease;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  background: $text-color;
+
+  transition: width $transition-time $transition-ease;
+}
+
+.nav-link:hover {
+  color: $text-color;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.active {
+  color: $text-color;
+}
+
+.active::after {
+  width: 100%;
+}
+
+/* =========================
+   CONTROLS
+========================= */
+
+.navbar-controls {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 0.75rem;
+
+  flex-shrink: 0;
+
+  margin-left: auto;
+}
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(142, 182, 155, 0.25);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: $text-color;
+
+  font-size: 0.85rem;
+
+  cursor: pointer;
+
+  transition:
+    background $transition-time $transition-ease,
+    border-color $transition-time $transition-ease,
+    transform $transition-time $transition-ease;
+}
+
+.theme-toggle:hover {
+  background: $card-bg-color;
+
+  border-color: $secondary-text-color;
+
+  transform: rotate(15deg);
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 36px;
+  height: 36px;
+
+  padding: 0;
+
+  border: 1px solid rgba(142, 182, 155, 0.25);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: $text-color;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.navbar-dark {
+  background: rgba(5, 31, 32, 0.96);
+}
+
+.navbar-light {
+  background: rgba(5, 31, 32, 0.92);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 1.5rem;
+  }
+
+  .navbar-links {
+    gap: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.65rem;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .navbar {
+    height: 64px;
+
+    padding: 0 1.25rem;
+  }
+
+  .navbar-links {
+    position: absolute;
+
+    top: 64px;
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 1.75rem;
+
+    padding: 2rem 0;
+
+    box-sizing: border-box;
+
+    background: $secondary-bg-color;
+
+    border-bottom: 1px solid rgba(142, 182, 155, 0.15);
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: 0.7rem;
+  }
+
+  .navbar-controls {
+    margin-left: 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+  .navbar-logo a {
+    font-size: 0.75rem;
+  }
+
+  .theme-toggle,
+  .menu-toggle {
+    width: 32px;
+    height: 32px;
+  }
+}
+
